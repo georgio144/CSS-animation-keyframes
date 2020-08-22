@@ -10,7 +10,6 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -107,26 +106,13 @@ h6 {
   position: relative;
   left: 0;
   /* animation-name: white-circle;
-   animation-duration: 2s;
-   animation-timing-function: linear;
-   animation-direction: alternate;
-   animation-iteration-count: infinite;
-   animation-delay: 2s;
-   animation-fill-mode: forwards;*/
-  -webkit-animation: white-circle 2s linear infinite alternate 0s forwards, red-circle 5s ease infinite alternate 0s forwards;
-          animation: white-circle 2s linear infinite alternate 0s forwards, red-circle 5s ease infinite alternate 0s forwards;
-}
-
-@-webkit-keyframes white-circle {
-  0% {
-    left: 0;
-  }
-  50% {
-    border-radius: 0;
-  }
-  100% {
-    left: 500px;
-  }
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;*/
+  animation: white-circle 2s linear infinite alternate 0s forwards, red-circle 5s ease infinite alternate 0s forwards;
 }
 
 @keyframes white-circle {
@@ -140,32 +126,18 @@ h6 {
     left: 500px;
   }
 }
-
-@-webkit-keyframes red-circle {
-  0% {
-    left: 500px;
-    background-color: red;
-  }
-  50% {
-  }
-  100% {
-    left: 0;
-  }
-}
-
 @keyframes red-circle {
   0% {
     left: 500px;
     background-color: red;
   }
   50% {
+    border-radius: 0;
   }
   100% {
     left: 0;
   }
 }
-
 .content:hover .content__circle {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
